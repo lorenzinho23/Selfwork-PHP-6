@@ -1,16 +1,16 @@
 <?php
 
-$users = [
-    ['name' => 'Davide', 'surname' => 'Cariola', 'gender' => 'NB'],
-];
+$numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-foreach ($users as $user) {
+$somma = 0;
+$contatore = 0;
 
-    if ($user['gender'] == 'M') {
-        echo "Buongiorno Sig. " . $user['name'] . " " . $user['surname'] . "<br>";
-    } elseif ($user['gender'] == 'F') {
-        echo "Buongiorno Sig.ra " . $user['name'] . " " . $user['surname'] . "<br>";
-    } else {
-        echo "Buongiorno " . $user['name'] . " " . $user['surname'] . "<br>";
+foreach ($numbers as $numero) {
+
+    if ($numero % 2 == 0) {
+        $somma = $somma + $numero;
+        $contatore++;
     }
 }
+
+echo $somma / $contatore;
