@@ -1,16 +1,22 @@
 <?php
 
-$numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for ($i = 1; $i <= 100; $i++) {
 
-$somma = 0;
-$contatore = 0;
+    switch ($i) {
 
-foreach ($numbers as $numero) {
+        case ($i % 3 == 0 && $i % 5 == 0):
+            echo "HACKADEMY \n";
+            break;
 
-    if ($numero % 2 == 0) {
-        $somma = $somma + $numero;
-        $contatore++;
+        case ($i % 3 == 0):
+            echo "PHP\n";
+            break;
+
+        case ($i % 5 == 0):
+            echo "JAVASCRIPT\n";
+            break;
+
+        default:
+            echo $i . "\n";
     }
 }
-
-echo $somma / $contatore;
