@@ -1,38 +1,18 @@
 <?php
 
-$words1 = [
-    'vostro',
-    67,
-    'essere',
-    'colle',
-    'mi',
-    'sempre',
-    [
-        'oscura',
-        'era',
-        89,
-        [
-            'mezzo',
-            'E'
-        ],
-        'ritrovai',
-        'per'
-    ],
-    'diritta'
+$users = [
+    ['name' => 'Davide', 'surname' => 'Cariola', 'gender' => 'NB'],
+    ['name' => 'Mario', 'surname' => 'Rossi', 'gender' => 'M'],
+    ['name' => 'Anna', 'surname' => 'Bianchi', 'gender' => 'F'],
 ];
 
-$words2 = [
-    'elemento1' => 25.89,
-    'elemento2' => 'possa',
-    'elemento3' => [
-        'Virgilio',
-        'Favore',
-        'favore',
-        ['fortuna']
-    ],
-    'fine' => '!'
-];
+foreach ($users as $user) {
 
-$results = "Nel " . $words1[6][3][0] . " del cammin di nostra vita " . $words1[4] . " " . $words1[6][4] . " " . $words1[6][5] . " una selva " . $words1[6][0] . ", ché la " . $words1[7] . " via era smarrita";
-
-echo $results;
+    if ($user['gender'] == 'M') {
+        echo "Buongiorno Sig. " . $user['name'] . " " . $user['surname'] . "<br>";
+    } elseif ($user['gender'] == 'F') {
+        echo "Buongiorno Sig.ra " . $user['name'] . " " . $user['surname'] . "<br>";
+    } else {
+        echo "Buongiorno " . $user['name'] . " " . $user['surname'] . "<br>";
+    }
+}
