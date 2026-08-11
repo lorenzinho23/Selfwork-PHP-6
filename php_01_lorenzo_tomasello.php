@@ -2,8 +2,6 @@
 
 $users = [
     ['name' => 'Davide', 'surname' => 'Cariola', 'gender' => 'NB'],
-    ['name' => 'Mario', 'surname' => 'Rossi', 'gender' => 'M'],
-    ['name' => 'Anna', 'surname' => 'Bianchi', 'gender' => 'F'],
 ];
 
 foreach ($users as $user) {
